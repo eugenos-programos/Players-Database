@@ -5,11 +5,9 @@ from kivy.lang import Builder
 from kivymd.uix.screen import MDScreen
 from kivymd.uix.screen import Screen
 from kivymd.uix.snackbar import Snackbar
-from kivymd.uix.dropdownitem import MDDropDownItem
 
 
-class MyScreenView(MDScreen):
-    """ A class that implements the visual presentation `MyScreenModel`. """
+class View(MDScreen):
 
     controller = ObjectProperty()
     model = ObjectProperty()

@@ -6,8 +6,7 @@ from Utility.parsers.sax_reader import XmlReader
 from kivymd.uix.snackbar import Snackbar
 
 
-
-class MyScreenModel:
+class Model:
 
     _not_filtered = []
 
@@ -84,7 +83,6 @@ class MyScreenModel:
         except ValueError as v:
             Snackbar(text="Data inserting error").open()
 
-
     def refresh_sportsman_in_table(self):
         self.table.row_data += self._not_filtered
         self._not_filtered = []
@@ -118,7 +116,6 @@ class MyScreenModel:
         self._not_filtered = self.select_sportsman_by_filters(filters=filters)
         for row in self._not_filtered:
             self.table.row_data.remove(row)
-
 
     @staticmethod
     def empty_filters(filters):
