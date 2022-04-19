@@ -7,7 +7,7 @@ from kivymd.uix.screen import Screen
 from kivymd.uix.snackbar import Snackbar
 
 
-class View(MDScreen):
+class MyScreenView(MDScreen):
 
     controller = ObjectProperty()
     model = ObjectProperty()

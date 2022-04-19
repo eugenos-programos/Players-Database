@@ -1,12 +1,12 @@
-from MyScreenView import View
+from View.myscreen import MyScreenView
 
 
-class Controller:
+class MyScreenController:
     _observers = []
 
     def __init__(self, model):
         self.model = model
-        self.view = View(controller=self, model=self.model)
+        self.view = MyScreenView(controller=self, model=self.model)
         self._observers = []
 
     def add_observer(self, observer):

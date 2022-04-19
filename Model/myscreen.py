@@ -6,7 +6,7 @@ from Utility.parsers.sax_reader import XmlReader
 from kivymd.uix.snackbar import Snackbar
 
 
-class Model:
+class MyScreenModel:
 
     _not_filtered = []
 

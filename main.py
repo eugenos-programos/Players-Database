@@ -1,7 +1,7 @@
 from kivymd.app import MDApp
 from kivymd.uix.datatables import MDDataTable
-from MyScreenController import Controller
-from MyScreenModel import Model
+from Controller.myscreen import MyScreenController
+from Model.myscreen import MyScreenModel
 from kivy.core.window import Window
 from kivy.metrics import dp
 
@@ -26,8 +26,8 @@ class PassMVC(MDApp):
                 ("[color=#123487]Rank[/color]", dp(25)),
             ],
         )
-        self.model = Model(table=self.table)
-        self.controller = Controller(self.model)
+        self.model = MyScreenModel(table=self.table)
+        self.controller = MyScreenController(self.model)
 
     def build(self):
         Window.size = (1920, 1080)
