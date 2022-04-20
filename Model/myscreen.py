@@ -84,8 +84,11 @@ class MyScreenModel:
             Snackbar(text="Data inserting error").open()
 
     def refresh_sportsman_in_table(self):
-        self.table.row_data += self._not_filtered
-        self._not_filtered = []
+        try:
+             self.table.row_data += self._not_filtered
+             self._not_filtered = []
+        except Exception as e:
+             pass
 
     def select_sportsman_by_filters(self, filters: list):
         not_filtered_sportsman = []
